@@ -1,0 +1,47 @@
+d1 $ every 4 (fast 2)
+-- $ every 3 (fast 2) 
+$ s "leKICK ~ ~ ~ leKICK ~ ~" #n 2 -- #irand 3
+
+
+d1 $ striate 8
+$ whenmod 8 4 (fast 2) $ "leKICK:2*2" #lpf 1000
+
+d1 silence
+
+d2 
+$ slow 2 $ striate 42
+$ s "software:3" #lpf 1200 #legato 2
+
+
+
+d2 -- $ striate 4
+$ whenmod 8 6 (fast 2) $ s "leHIHAT:3*4" #legato 0.5 
+#lpf (slow 2 $ 1000+(sine*5000)) #resonance 0.2 #shape 0.4
+
+d2 silence
+
+d3 -- $ always (striate 8) 
+$ whenmod 4 2 (fast 2)
+$ s "~ laSNARE:4" #shape 0.2 #gain 0.9
+
+d3 silence
+
+d6 $ every 2 (#legato 0.1) $ every 2 (fast 2)
+$ every 4 (# octave 5) 
+$ whenmod 8 4 (#note "[c4,g3,g4,e4]")
+$ note "[gs3,g3,d3,e4]" # legato 0.2 # s "synth" #midichan 1
+
+hush
+
+d1 silence
+
+d3 silence
+
+d2 silence
+
+d4 -- $ sometimes (fast 2) 
+-- $ fast 2 
+$ almostAlways (#gain 0) $ s "leHIHAT:4*8"
+#legato 0.2 #room 0.2 #sz 0.8 #hpf 1700
+
+d4 $ 

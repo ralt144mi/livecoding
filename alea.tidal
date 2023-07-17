@@ -1,0 +1,305 @@
+-------------------------------------------------------------
+------ooooo  oooooo oo   oooooo oo oo     oo     o   o oo----
+------oo  oo oo  oo oo     oo   oo oo oo  oo oo  oo oo oo----
+------ooooo  oooooo oo     oo   oo oooooo oooooo o o o oo----
+------oo  oo oo  oo oooooo oo   oo    oo     oo  o   o oo----
+-------------------------------------------------------------
+------10-DECEMBRE-2022-----ALEATRONOME------SAINT-ETIENNE----
+-------------------------------------------------------------
+----------------------------------------- <^[[[>< ------_____
+------------------------------------------------------_/-----
+Salut moi c'est Ralt144MI----------___---------------/-_-----
+----------------------------------[ooo]--------(---3)>[#]----
+-----------------------------------(-(-------)-)-(--|--------
+------------------------------------)-)----_-(-(-)-|---------
+------------------------------------------/-\)-)-(/----------
+Toute les vidéos que vous allez voir ont été filmé par 
+mon GRAND PERE ainsi que mon PAPA, je vais un peu les 
+manipuler tout en manipulant le son. 
+J'espere que ça va vous plaire.
+La musique est programmé en direct au travers de ce language
+TidalCycles, ainsi que dans un autre langage pour d'autres 
+morceaux qui se nomme Sardine, n'hésitez pas a me poser des 
+questions et à venir vous amusez avec la caméra :-)
+
+
+
+
+
+(  (   (   ( ( ( ([COMPUTER MUSIC]) ) ) )   )     )      )
+
+setcps(135/60/4)
+
+hush
+
+panic
+
+--CASSETTE 
+
+d3 -- PAD C11 --activer disto apres
+$ slow 4
+-- $ fast 4 $ striate 12
+$ note "e4"-- "[e4,c2,d6,c4]" 
+# s "synth" #legato 4 #midichan 1
+
+do
+once
+-- d6 $ slow 8
+    $ s "ralt144mi" #speed 0.8 --0.4 1.1
+    #gain 1.3
+
+d2 --GRUSIIN SND
+$ slow 1
+-- $ sometimes (|+ note 12) $ sometimes (slow 2)
+-- $ almostNever (fast 4) 
+-- $ striate  "<2 4 8 16>"
+-- $ rarely (|+ note (slow 4 "12 -12"))
+$ note "[d5(1,3), e4(1,5), c4(1,7)]" # s "synth" #midichan 0
+    
+d4 -- $ fast 2
+$ slow 0.5 $ s "~ ~ leKICK:3"
+-- #shape 0.2
+
+d4 silence
+
+d5 -- $ every 4 (ply 2)
+ $ fast 2
+$ slow 0.25 $ s "~ leHIHAT:6 ~"
+
+d1 -- $ every 6 (fast 2)
+-- $ every 3 (|+ speed "0.2")
+$ slow 0.5 $ s "laSNARE:3 ~ ~" #speed 1
+
+d3 silence
+
+once
+-- d9 $ striate 12 
+--glitch a fond 
+-- $ slice 3 (ply 2 "0 1 2 3 4 5 6 7 8 9") --16
+    $ s "software" # irand 4  
+     #lpf 2500 #gain 0.9 --0.7 shape ply
+         #room 0.4 #sz sine
+       -- #pan (slow 4 $ sine) #legato 2
+     --  #shape 0.2
+     --  #ring 1 #ringf sine*1000 # ringdf sine 
+      --  COMPUTER MUSIC
+
+do
+xfade 1 silence 
+xfade 2 silence
+xfade 3 silence
+xfade 5 silence
+
+d7 silence
+
+d9 silence
+
+d2 $ every 4 (slow 2)
+$ every (slow 2 "1 2 3 4") (ply 2)
+$ sometimes (#octave 4)
+$ note "c3(2,3) ~ <g3*6 e3*6>" # s "synth" #midichan 0 
+
+d6 silence
+
+xfade 4 silence
+
+hush
+
+setcps(0.63)
+
+setcps(135/60/4)
+
+(     (    (   ( ( (([LA GABINIERE]) ) )) ) ) ) ) ) )
+
+
+--VIELLEàROUE
+d1 
+     -- $ striate 12
+      -- $ ply 4 
+      $ s "nevers:2" #legato 4 
+      -- #speed 0.9
+      -- #bpf 500 #bpq "0.5 1"
+       #speed (sine+ 0.3)
+      #room 0.5 
+      -- #octersub 4 #gain 0.8
+      -- #octer 1 
+
+d3
+    $ s "leKICK:2*4"   
+    -- #octersub 2
+
+d3 silence
+
+d4 
+    -- $ fast 1
+    -- $ almostNever (#n "7")
+$ s "[[leHIHAT leHIHAT] [leHIHAT leHIHAT ~ ~]]"  
+    #n "6"
+    #hpf 5000 
+     #pan "<0 1>" #shape 0.6
+    -- #ring 2 #ringf (1000 * (- sine))
+
+d5 
+    -- $ fast 2
+    -- $ almostNever (#n "7")
+$ s "[[leHIHAT leHIHAT ~ ~] [leHIHAT leHIHAT]]" 
+    # n"6"
+    #pan "<1 0>"  #shape 0.6 
+    -- #hpf 5000 
+    -- #ring 4 #ringf (1000 * sine) 
+
+d6  
+    -- $ rarely (ply 6) 
+    -- $ ply (("1 2 3 4 5 6 7 8 9 10")*1) --6
+    -- $ rarely (slow 4) 
+    $ fast 1 --2 
+    $ n "1 2 ~ 3 ~ 20 5 ~" 
+    # s "laSNARE" #shape 0.9
+    -- #irand 21
+    #room 0.1 #sz 0.8
+    #legato 0.8 #gain 0.65
+
+--sn hh1
+do 
+solo 6
+solo 4
+solo 2
+
+--SYNTHTIME VOCOD H11
+
+d2  $ rarely (#gain 0)
+$ note ("<c5>*16")
+# s "synth" #midichan 1  #legato 0.5 
+
+
+
+--kick
+solo 3
+
+--all
+do 
+unsolo 1
+unsolo 2
+unsolo 3
+unsolo 5
+unsolo 4
+unsolo 6
+unsolo 7
+
+--FADEOUT
+do
+d1 silence
+d3 silence
+d5 silence
+d4 silence
+
+d6 silence
+
+hush
+
+(    (     ( ( ( ( ([MEROU COMMUN]) ) ) ) ) ) )    )
+
+
+d6 
+   --  $ striate 8 
+   $ s "FXliquid*6" #irand 4 #crush 16 #leslie 0.8
+    #pan 1
+   --  #lpf (slow 4 $ saw * 1000) #resonance 0.5
+
+d6 
+-- d2
+    -- $ striate 16 --8
+    $ s "FXliquid*12" #gain 1.2 
+    #irand 12 #pan 0 --4 --12
+    -- #crush "<8 4>"
+
+( ( (( ( ( ( ( (|SPACEPART|||||))¿°¿°))))))))))
+
+hush
+
+d2  
+    $ slow 4
+    $ striate 8 
+    $ s "FXliquid*5" #irand 16
+    #room 0.4 #size 0.8
+
+
+(((( ([FAITLE]))))])))))))]])))))
+
+--YA LE RAB EN DESSOUS REMI OUBLIE PAS SI TU VEUX BIPBOPROBOT
+--CORDIALEMENT, LORDINATEUR
+
+(((((((([[[[[BIp BOp R0b0t[[[]) ) ) ) ) ) )) ) )
+--samuser avec les deux melodies rab TX7
+
+setcps(0.58)
+
+hush
+
+do
+
+
+d2 	-- $ jux ((#speed "<0.25 0.5 0.75 1.5 2 0.125>"))
+	$ fast 1.2 $ s "[blip(6,8)]*2" #irand 2 
+	-- #hpf (slow 2 $ (sine+1)*1000) #resonance 0.2
+
+d4 
+	$ jux (rev) 
+	$ fast 1.2 
+	$ s "[bleep(6,4)]*2" 
+	-- #irand 10 
+	#gain 0.6
+	-- #lpf (slow 4 $ (sine+2)*500) #resonance 0.2 
+	-- #distort 0.2
+
+d3 	$ fast 1.2 
+	$ s "808bd:4*4" -- *4 
+	#gain 1.2
+	-- #octersub 1
+
+do 
+d3 silence 
+d4 silence
+
+hush
+
+d1 silence
+
+d1 	$ fast 1.2 $ s "[~ RIMtonal:6*2 ~ ~]*2" 
+
+d7 	$ fast 2.4 $ s "[~ CRASHglitch:6]" 
+	#room 0.2 
+	-- #pan (slow 4 $ sine)
+
+xfade 7 silence
+
+--GLITCHING TIME pas ce soir Amuse toi sur la video plutot 
+
+-- xfade 2	$ sometimes (#room (saw))  --rentrer param a la suite
+--	$ s "FXliquid:14*8"
+	-- #drywet 4  #recstart 1
+	-- #rvecho 3  #coefal ((slow 8 $ saw*10)) #room 0.4
+	-- #speed 0.3
+	 -- #pan (fast 2.3 $ saw*(-1))
+	-- #gain 0.8
+	-- #speed 2
+--	#legato 6
+--ATTENTION AU VOLUME /!\ INSTABLE
+
+lance l'horreur sur le TX7
+OUI 
+FAit le
+JE TE DIS DE LE FAIRE
+
+--cassette zwiip
+
+--ECHOTIME      (  ( ( (o) ) )  )
+--CASIOTIME C-F
+--Il faut que tu respires
+
+--K7~NAP
+
+--finir
+
+
+

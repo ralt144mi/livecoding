@@ -1,0 +1,340 @@
+-------------------------------------------------------------
+-------------------------------------------------------------
+------ooooo  oooooo oo   oooooo oo oo     oo     o   o oo----
+------oo  oo oo  oo oo     oo   oo oo oo  oo oo  oo oo oo----
+------ooooo  oooooo oo     oo   oo oooooo oooooo o o o oo----
+------oo  oo oo  oo oooooo oo   oo    oo     oo  o   o oo----
+-------------------------------------------------------------
+------29-OCTOBRE-2022------DIAMANT-D'OR--------STRASBOURG----
+-------------------------------------------------------------
+----------------------------------------- <^[[[>< ------_____
+------------------------------------------------------_/-----
+Salut moi c'est Ralt144MI----------___---------------/-_-----
+----------------------------------[ooo]--------(---3)>[#]----
+-----------------------------------(-(-------)-)-(--|--------
+------------------------------------)-)----_-(-(-)-|---------
+------------------------------------------/-\)-)-(/----------
+Toute les vidéos que vous allez voir ont été filmé par 
+mon GRAND PERE ainsi que mon PAPA, je vais un peu les 
+manipuler tout en manipulant le son. 
+J'espere que ça va vous plaire 
+:)
+PS: 
+je ne sais pas ce quil se passe
+Je suis devenu radiophonique 
+Je vais faire différents...... (([Morceaux])).....
+Enfin du moins, essayer de m'y tenir
+
+
+(  (   (   ( ( ( ([COMPUTER MUSIC]) ) ) )   )     )      )
+
+
+once $ s "softwareall"
+       #gain 0.9 #lpf 2500
+
+once 
+-- d5 $ striate 12
+    $ s "software" #irand 4
+       #gain 0.8 #lpf 2500 
+         #room 0.8 #sz sine
+       -- #pan (slow 4 $ sine)
+    -- #shape 0.6
+    -- #ring 1 #ringf sine*1000 # ringdf sine 
+      --  COMPUTER MUSIC
+
+d1 $ s "hh*8"
+    -- #pan sine
+
+d2 $ n "4 ~ ~ 5 ~ ~ ~ ~" # s "BD808" 
+
+d3 -- $ sometimes (slow 4) 
+    $ fast 2 $ n "5 5 ~ 5 ~ 5 5 ~" # s "sn:5" #legato 0.4 #gain 0.8 
+
+d4 $ n( scale "min7" "14*2 7" ) # s "contrebasse" #legato 1.1 
+    -- #irand 250  
+        -- #speed sine*0.5+0.5 -- #room 0.45
+
+do
+d1 silence 
+d2 silence
+d3 silence
+
+
+xfade 4 silence
+
+setcps(0.63 )
+
+(    (    ( ( ( ([APNEE DIFFICILE]) ) ) )     )       )
+
+-- INTRO K7 NAP faceB de RYTHM
+
+d1 $ s "bd"
+
+-- BRUIT D'eau
+d3                                                          
+    -- $ every 8 (fast 4)
+	-- $ striate (56) -- 56 --16 --1 
+	$ s "son:2" 
+	-- # pan (slow 4 $ sine)
+	-- # room 0.9
+	-- # sz (slow 2 $ (sine+0.5)) 
+	#gain 1
+
+xfade 2 silence
+
+-- glitching
+d2   
+     -- $ ply 2 --5
+     $ s "[<[~ ~ FXglitch ] ~>*0.5]*4" --16
+     -- $ s "[<[~ ~ FXglitch COWfun] ~>*0.5]*16" 
+     -- #irand 8 
+     -- #crush 16
+     -- #speed "[1 <0.5 0.7>]" 
+            -- #room 0.2 --0.4
+            -- #size (0.5+(sine*0.5)) --(0.5+(sine*0.5))
+
+do
+d1 silence
+d3 silence 
+
+hush
+
+(     (    (   ( ( (([LA GABINIERE]) ) )) ) ) ) ) ) )
+
+
+--VIELLEàROUE
+d1 
+    -- $ striate 12
+    -- $ ply 4
+    $ s "nevers:2" 
+    -- #speed 0.9
+    -- #speed (sine+ 0.3) #legato 3
+    -- #room 0.5 
+    -- #octersub 4 #gain 0.8
+    -- #octer 1 
+
+--SARDINE SYNCLAVIER
+
+d3
+    -- $ fast 4.01 
+    $ s "bd*4" 
+    -- # n "[1 1 [0 0 1] 0]"  
+    -- #octersub 2
+
+d4 
+    -- $ fast 1 
+    $ s "[[hh hh] [hh hh ~ ~]]"  
+    #hpf 5000 
+    -- #pan "<0 1>*2" #shape 0.6
+    -- #ring 2 #ringf (1000 * (- sine))
+
+d5 
+    -- $ fast 2 
+    $ s "[[hh hh ~ ~] [hh hh]]" 
+    -- #pan "<1 0>"  #shape 0.6 
+    #hpf 5000 
+    -- #ring 4 #ringf (1000 * sine) 
+
+
+--FADEOUT
+do
+xfade 1 silence
+xfade 3 silence
+xfade 5 silence
+xfade 4 silence
+
+hush
+
+(    (     ( ( ( ( ([MEROU COMMUN]) ) ) ) ) ) )    )
+
+
+d6 
+    $ striate 8 
+    $ s "FXliquid*6" #irand 4 #crush 16 #leslie 0.8
+    -- #lpf (slow 4 $ saw * 1000) #resonance 0.5
+
+xfade 6 
+    -- $ striate 16 --8
+    $ s "FXliquid*12" #gain 1.2 
+    #irand 12 --4 --12
+    -- #crush "<8 4>"
+
+--SARDINE TX7 CHOEURS 2
+
+d5 $ s "[HH808:2(4,5)]*2"
+
+d7 
+    $ s "[~ sn:4]*2" 
+    -- #crush 4 
+    -- #room 0.5 
+    -- #hpf 4000  
+
+hush
+
+(   (    ( ( ([JE COMMENCE A MANQUER D'AIR])   )  ) ) )  )
+
+setcps(0.63)
+
+--do
+    -- resetCycles
+    d1 $ s "[BDacous(3,5)]*2" -- #irand 30 #room 0.5 
+    -- #cps (slow 40 $ saw*1.8) 
+
+d4  
+    -- $ striate 12 
+    $ s "[FXliquid(5,5)]" -- #irand 24 
+    -- #room 0.4 #size 0.8 
+    -- #crush (8*(slow 0.5 $ saw))
+    -- #pan (slow 2 $ sine)
+
+--relancer HH au dessus
+
+setcps(0.63)
+
+( ( (( ( ( ( ( (|SPACEPART|||||))¿°¿°))))))))))
+
+hush
+
+d2  
+    $ slow 4
+    $ striate 8 
+    $ s "FXliquid*5" #irand 16
+    #room 0.4 #size 0.8
+
+
+(((( ([FAITLE]))))])))))))]])))))
+
+
+
+TEMPOMEDLER ET LIS DES TRUCS REMPLIS DE POISSON REMPLIS DE POISSON REMPLIS DE POISSONREMPLIS DEPOIRUSOSNSLOPREMPS 
+
+do
+xfade 5 
+    -- $ striate 12  
+    $ s "nevers:2" #speed 0.4 #legato 5 #octer 1
+    -- # speed (slow 2 $ saw*1.8) -- poursolo 40-32-80
+resetCycles
+
+--DOIT
+d6  
+     $ slow 8 --8 4 2  
+    -- $ striate "<4 6 12 36>" 
+    $ s "son:1*8" #lpf 1000 # room 0.4 #legato 1
+    #speed (irand 10)/1000 #pan "<0 0.5 1>" 
+
+d4 silence
+
+
+do 
+xfade 6 silence
+xfade 2 silence
+
+--chais pas pour ce kick, non le mets pas , quoi que
+xfade 4 
+    $ s "bd*4" #shape 0.8 
+
+d5 silence
+
+
+d6 
+    $ ply 2
+    $ s "~ sn:4" 
+    -- #octer 1 #shape 0.4
+
+d7
+    $ ply 2
+    $ s "hh:8*4" 
+    -- #octer 1 
+    #shape 0.7 #legato 0.5
+
+do 
+d4 silence 
+
+do --tout sauf vielleàroue
+d7 silence
+d3 silence
+d6 silence
+d2 silence
+d1 silence
+
+--BALLADE DE KICK
+
+xfade 2 $ slow 0.5   --0.2 -- 8 -- 4 -- 2 -- 0.2  
+$ almostAlways (#comb (slow 7 $ tri))
+$ whenmod 12 8 (#squiz 10)
+$ s "protokick(5,3)"
+#gain 1 #room 0.3 #sz 0.8
+
+--BIp BOp R0b0t
+--samuser avec les deux melodies rab TX7
+setcps(0.58)
+
+hush
+
+do
+
+
+d2 	-- $ jux ((#speed "<0.25 0.5 0.75 1.5 2 0.125>"))
+	$ fast 1.2 $ s "[blip(6,8)]*2" #irand 2 
+	-- #hpf (slow 2 $ (sine+1)*1000) #resonance 0.2
+
+d4 
+	$ jux (rev) 
+	$ fast 1.2 
+	$ s "[bleep(6,4)]*2" 
+	-- #irand 10 
+	#gain 0.6
+	-- #lpf (slow 4 $ (sine+2)*500) #resonance 0.2 
+	-- #distort 0.2
+
+d3 	$ fast 1.2 
+	$ s "808bd:4*2" 
+	#gain 1.2
+	-- #octersub 1
+
+do 
+d3 silence 
+d4 silence
+
+hush
+
+d1 silence
+
+d1 	$ fast 1.2 $ s "[~ RIMtonal:6*2 ~ ~]*2" 
+
+d7 	$ fast 2.4 $ s "[~ CRASHglitch:6]" 
+	#room 0.2 
+	-- #pan (slow 4 $ sine)
+
+xfade 7 silence
+
+--GLITCHING TIME pas ce soir Amuse toi sur la video plutot 
+
+-- xfade 2	$ sometimes (#room (saw))  --rentrer param a la suite
+--	$ s "FXliquid:14*8"
+	-- #drywet 4  #recstart 1
+	-- #rvecho 3  #coefal ((slow 8 $ saw*10)) #room 0.4
+	-- #speed 0.3
+	 -- #pan (fast 2.3 $ saw*(-1))
+	-- #gain 0.8
+	-- #speed 2
+--	#legato 6
+--ATTENTION AU VOLUME /!\ INSTABLE
+
+lance l'horreur sur le TX7
+OUI 
+FAit le
+JE TE DIS DE LE FAIRE
+
+--cassette zwiip
+
+--ECHOTIME      (  ( ( (o) ) )  )
+--CASIOTIME C-F
+--Il faut que tu respires
+
+--K7~NAP
+
+--finir
+
+
+

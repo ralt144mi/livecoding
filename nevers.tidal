@@ -1,0 +1,256 @@
+-------------------------------------------------------------
+-------------------------------------------------------------
+------ooooo  oooooo oo   oooooo oo oo     oo     o   o oo----
+------oo  oo oo  oo oo     oo   oo oo oo  oo oo  oo oo oo----
+------ooooo  oooooo oo     oo   oo oooooo oooooo o o o oo----
+------oo  oo oo  oo oooooo oo   oo    oo     oo  o   o oo----
+-------------------------------------------------------------
+------15-JUILLET-2022-------NO-SCHOOL--------------NEVERS----
+-------------------------------------------------------------
+----------------------------------------- <^[[[>< ------_____
+------------------------------------------------------_/-----
+Salut moi c'est Ralt144MI----------___---------------/-_-----
+----------------------------------[ooo]--------(---3)>[#]----
+-----------------------------------(-(-------)-)-(--|--------
+------------------------------------)-)----_-(-(-)-|---------
+------------------------------------------/-\)-)-(/----------
+
+
+setcps(0.55)
+--INTRO K7 NAP faceB de RYTHM
+
+--VIDEOTIME c[o] 
+
+d3      -- $ every 8 (fast 4)
+	-- $ striate (56) -- 56 --16 --1 
+	$ s "son:2" 
+	# pan (slow 4 $ sine)
+	-- # room 0.9
+	-- # sz (slow 2 $ (sine+0.5)) 
+	#gain 0.8
+
+d3 silence
+--jouer avec le slow
+
+xfade 2 $ slow 0.2   --0.2 -- 8 -- 4 -- 2 -- 0.2  
+$ almostAlways (#comb (slow 7 $ tri))
+$ whenmod 12 8 (#squiz 10)
+$ s "protokick(5,3)"
+#gain 0.7 #room 0.3 #sz 0.8
+
+--TX7 CLAVINET 2
+d4 	$ slow 8
+	-- $ fast 4 $ slow 5 
+	$ n "[[0 ~]*2 [4 ~]*8](5,3)" # s "tx7"
+	#octave 2
+
+							--d2 $ s "protokick(5,3)"
+
+					--d3 $ every 2 (fast 4) $ s "[ ~ sn](5,3)" #distort 0.2
+
+hush
+
+xfade  2 silence
+--Rôti de Glitch 
+
+INSERER ROTI ICI ET MODIFIER AU DESSUS
+
+--VIDEOTIME pendant le rôti c[o]
+
+hush
+
+--BIp BOp R0b0t
+do
+
+d2 	-- $ jux ((#speed "<0.25 0.5 0.75 1.5 2 0.125>"))
+	$ fast 1.2 $ s "[blip(6,8)]*2" #irand 2 
+	#hpf (slow 2 $ (sine+1)*1000) #resonance 0.2
+
+d4 
+	-- $ jux (rev) 
+	$ fast 1.2 
+	$ s "[bleep(6,4)]*2" 
+	-- #irand 10 
+	#gain 0.6
+	-- #lpf (slow 4 $ (sine+2)*500) #resonance 0.2 
+	-- #distort 0.2
+
+d3 	$ fast 1.2 
+	$ s "808bd:1*4" 
+	#gain 1 
+	-- #octersub 1
+
+do 
+d3 silence 
+d4 silence
+
+d1 silence
+
+d1 	$ fast 1.2 $ s "[~ RIMtonal:6*2 ~ ~]*2" 
+
+d7 	$ fast 2.4 $ s "[~ CRASHglitch:6]" 
+	#room 0.2 
+	-- #pan (slow 4 $ sine)
+
+xfade 7 silence
+
+hush
+
+d5 silence
+
+--A NEVERS LA JOLIE VILLE_K7-->Tidal 
+
+--HURDY GURDY TIME --d6 d'abord
+
+d6 	-- $ slow 9 $striate (slow 8 $ irand 248)--killer
+	-- $ always (#room (slow 8 $ sine+0.5))--killer
+	-- $ almostNever (#speed "<0.985>")
+	-- $ often (#legato 4) 
+	$ s "nevers:1"
+ 	-- #leslie 0.8 --Woopidoop
+	#legato 1 
+	#gain 0.7 
+
+d6 silence
+
+d5 	-- $ slow 8 --killer
+	-- $ striate 26 --killer
+	$ s "nevers"
+	-- #enhance 0.23 --0.8
+	--  #distort 0.13
+	--  #room 1 
+	-- # speed ((slow 59 $ irand 100)/100)
+	#legato 2
+	#gain 0.7
+
+d5 silence
+
+do
+xfade 5 silence
+xfade 6 silence
+
+--AMbiant to TECHNO ? 
+--Plus de vielle à Roue de sûr
+
+d1 	$ s "nevers:2" 
+	#octave 4 -- "<4 5 6>" -- "<4 5>" 
+	#lpf 500 #legato 6
+
+
+d2 	$ jux ((#speed (sine)) . rev)
+	$ s "nevers:2" 
+	#octave 4 -- "<7 5 6>" -- "<4 5>" 
+	#bpf 1000 #room 2 #gain 0.7 
+
+
+--K7bub0
+
+do 
+xfade 1 silence
+xfade 2 silence
+xfade 5 silence
+
+do
+hush
+setcps(0.55)    -- fais rentrer le HH après
+d1 	 -- $ almostNever (fast 2) 
+	 -- $ almostNever (fast 8) 
+	 $ s "FXliquid*8" 
+	 #irand 20
+	 #gain 1
+	 -- #pan (slow 2 $ tri)
+	 -- #enhance 0.4 -- (sine/2+0.5) --0.4
+	-- #speed 0.4
+d2       -- $ almostAlways (#resonance 0.4)
+	 -- $ rarely (#resonance 0.8)
+	 -- $ rarely (#room 0.8)
+	 -- $ sometimes (#lpf (slow 4 $ sine*10000)) 
+	$ s "protokick*4"
+	  #lpf 3000 -- (slow 8 $ (sine*2000)+200) 
+	 -- #resonance 0.6
+	 #gain 0.9
+
+d1 silence
+
+d2 silence
+
+-- rentrer apres
+d3 	 -- $ n "<[~ 1]*4 [~ ~ 1]*2>*8" 
+	$ s "[~ SD808]*2" 
+	 #irand 2 #distort 0.33 #gain 1.1 
+
+hush
+
+-- faire entre HH
+d4 $ rarely (striate (36)) $ s "hh*8" --striate 34
+
+--BREAK remonte pense a descendre le d2 proto pour le lancer solo
+do 
+d1 silence
+d2 silence
+xfade 5 $ s "[~ ~ hh]*8" #enhance 2 #pan 1 #gain 1
+xfade 4 $ s "hh*8" #enhance 4 #pan 0 -- #squiz 2
+
+--Break remonte et rajoute d3 debilos
+
+--transi
+
+xfade 4 $ s "hh*8" #enhance 4 
+	-- #rvecho 1 #coefal (slow 3 $ sine*20) #drywet 1.2 #recstart 1
+	#gain 0.9
+
+do 
+d1 silence
+d2 silence
+d3 silence
+
+
+xfade 2	$ sometimes (#room (saw))  --rentrer param a la suite
+	$ s "FXliquid:14*8"
+	-- #drywet 4  #recstart 1
+	-- #rvecho 3  #coefal ((slow 8 $ saw*10)) #room 0.4
+	-- #speed 0.3
+	 -- #pan (fast 2.3 $ saw*(-1))
+	-- #gain 0.8
+	-- #speed 2
+	#legato 6
+--ATTENTION AU VOLUME /!\ INSTABLE
+
+
+--nappe tx7 bien glitchy
+
+d7 $ n "0" # s" tx7*8" 
+
+--cassette zwiip
+
+--ECHOTIME      (  ( ( (o) ) )  )
+--CASIOTIME C-F
+--Il faut que tu respires
+
+--K7~NAP
+
+--finir
+
+hush
+
+
+
+
+
+--rab 
+
+
+
+
+--d1 $ n "[~ c'aug]*4" # s "tx7" #octave 3
+--d2 $ s "[~ protokick]*4" #speed 1.5 #leslie 4
+--d3 $ s "hh*8"
+
+--d silence
+
+--d4 $ s "[sn]*2"
+
+--d5 $ striate 56 $ s "crow*5" #room 1 #sz (sine) 
+
+
+hush

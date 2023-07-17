@@ -1,0 +1,192 @@
+UTILITAIRES
+
+setcps(0.1875)
+
+setcps(0.5)
+
+setcps(0.3125)
+
+---------------------------------------------
+-- record long
+d1 $ slow 2 $ sound "laloopRec" #legato 2
+
+-- record short
+d1 $ sound "laloopRec" 
+
+-- stop record
+d1 $ silence
+
+-- reset buffers.
+once $ sound "laloopReset"
+
+P1 :19 | P2 :47 | P3 :73
+---------------------------------------------
+COMPRESSEUR à la console svp :) 
+---------------------------------------------
+ACLCALVRG(0.2,0.8)
+---------------------------------------------
+                Bonjour, cette pièce s'appelle 
+                aclcalvrg(0.2,0.8), oui c'est 
+                pas le genre de nom dont on 
+                se souvient, mais ce n'est pas 
+                grave. C'est une pièce pour 
+                accordéon et programmation
+                temps-réel. Tous les sons que
+                je vais produire vont venir 
+                des sons de l'accordéon.
+                En espérant que cela vous 
+                plaira :) merci !
+                
+Et maintenant le début : PARTIE 1
+---------------------------------------------
+
+setcps(0.1875)
+
+
+-- play loop jouer sur la speed 
+xfade 5 $ slow 2
+  -- $  fast 4
+  -- $ almostAlways (#pan (fast 2 $ rand))
+  -- $ every 8 (#hpf 1500)
+  -- $ every 8 (#resonance 0.5)
+  -- $ always (#speed 0.9)
+  -- $ sometimes (slow "<8 2>") 
+  -- $ striate "<16 8 25 20>" 
+  $ sound "accord:5*4" -- *4 
+  #speed 0.5 
+  #pan (slow 4 $ sine)
+  -- #lpf (range 600 1600 $ sine)
+  #begin 0 #legato 1 #shape 0.75
+  -- #accelerate 0.04 
+            -- # theta  0.5 -- (range 1 (-1) sine)
+            --  # phi 0.5 -- (range 1 (-1) (slow 3 $ sine))
+  # gain 0.65 #room 0.6
+
+d5  silence
+
+
+--jouer sur le rythme
+d4  $ fast 4 --8 le tueur
+--    $ sometimes (slow 2) 
+--    $ rarely (slow 4)
+--  $ rarely (#crush "<16 8 4>") --BITCRUSH 
+--  $ striate "2 6 4"  --x16 en dessous
+$ sound "accord:4*2" 
+ #pan rand 
+-- #leslie 0.8
+#shape 0.7 #gain 0.8
+#speed "1 1.009 0.991"
+#begin 0 #legato 1
+ #room 0.6 #sz 0.8
+
+--plus de spatia
+
+d4 silence
+
+panic
+
+---------------------------------------------
+------->>>>>>>PARTIE 2
+---------------------------------------------
+
+--Record l'impact
+setcps(0.5)
+
+d2 -- $ superimpose (#speed 0.5)
+$ slow 1 
+$ sound "accord:12"
+    #speed 0.01 #legato 8  
+   #room 0.5 #sz (range 0.2 0.8 $ slow 4 $ sine)
+    #shape 0.25
+ --Spectral EFFECTs
+    -- #accelerate 0.5 
+      -- # binshift (irand 50) #speed 0.8
+       # scram 0.2
+      #gain 0.85 
+      #pan (slow 2 $ saw)
+-- #end 0.08
+
+hush
+
+--IMPACT
+
+d7 -- $ superimpose (#speed 0.5)
+$ slow 1 --1 pour les 3 dernier 
+$ sometimes (#pan (slow 2 $ saw))
+$ sound "accord:12"
+    -- #shape 0.45
+     #speed 0.1  #gain 0.85 #legato 8  
+    #begin 0 #legato 1 
+    #room 0.5 #sz (range 0.2 0.8 $ slow 4 $ sine)
+    #shape 0.2 
+ --Spectral EFFECTs
+      #accelerate 0.5 
+     --  # binshift (irand 50) #speed 0.8
+     # scram 0.02
+    --  #gain 1.2 #pan sine
+-- #end 0.08
+
+hush
+
+--Bruit de clés --découpe 
+d6 
+-- $ superimpose (fast 2)
+-- $ slow 4 
+--  $ almostNever (fast 8)
+-- $ fast 8 
+-- $ ply 4 --
+-- $ striate 3
+-- $ sometimes (fast 2) 
+$ sound "accord:10"
+-- # accelerate 1
+--Spectral EFFECTs
+    -- # binshift 0.2
+    -- # scram 0.5 #shape 0.7
+-- # enhance 0.6
+ #pan "<0 0.5 0 0.5 0.8 1>"
+ #gain 0.95  
+#legato 2 #begin 0
+
+---------------------------------------------
+----------->>>>>>PARTIE 3
+---------------------------------------------
+
+
+setcps(0.3125)
+
+--souffle
+xfade 6  $ ply 4 --slow 8 
+ $ almostNever (#resonance 0.6) 
+   $ rarely (#resonance 0.5) 
+$ sound "accord:10*152" -- *152 
+ #gain 1.25 #shape 0.8
+--  #lpf (range 1500 2500 $ slow 4 $ sine) #resonance sine
+#room 0.4 #sz 0.98 
+  #speed "0.17*4 0.2"
+#legato 1 #begin 0 
+  -- #crush 16 #pan (sine) 
+#cps (range 0.2 0.9 $ slow 8 $ saw)
+
+--Tue le son et le tempo
+xfade 5 
+$ every 8 (fast 3)
+$ slow 6
+    $ s "accord:8*152" -- *152
+    #begin 0.01 #shape 0.4 #room 0.5 
+    #hpf 1500 #resonance 0.5
+    #accelerate (slow 2 $ saw)
+    #gain 1.2 
+    #legato 0.9
+    #begin 0.26 -- #shape 0.8
+
+do 
+xfade 5 silence
+xfade 6 silence
+
+
+-Alix Le Van à L'accordéon 
+-Rémi GEORGES (Ralt144MI) au live-coding
+
+
+
+

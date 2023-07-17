@@ -1,0 +1,65 @@
+
+hush
+
+d2  
+    $ slow 4 --4 --2
+    $ striate 16 --8 --16 
+    $ s "FXliquid*5" #irand 16
+    #room 0.4 #size 0.8 
+    #theta (range (-1) 1 (slow 4 $ sine))
+    #phi (range (-0.25) 0.25 (slow 4 $ sine))
+
+d3  $ (fast 8) --2 --8 --sometimes
+     $ almostNever (#scram 0.5)
+     $jux (rev)
+     $ s "bass*2" 
+     #scram 0.1 #gain 0.8
+     #theta (range (-1) 1 (slow 0.66 $ sine))
+     #phi (range (-0.25) 0.25 (slow 0.66 $ sine))
+
+d1  -- $ slow 0.5 $ striate 12  
+    $ s "juj*8" #irand 150
+    #imag 0.9 #theta 0.12 #phi (0.5)
+
+d1 silence
+
+hush
+
+d4  $ sometimes (#phi (range (-1) 1 (saw)))
+    -- $ striate 16
+    $ s "nevers:2" #gain 0.9 #legato 2
+    -- #binshift 0.1
+     #theta (range (-1) 0 (rand))
+    #phi (range (0) 1 (tri))
+
+
+d5  $ sometimes (#phi (range (-1) 1 (saw)))
+    -- $ striate 32 
+    $ s "nevers:2" #speed 1.1
+    #gain 0.9 #legato 2 
+    -- #binshift 0.09
+    #theta (range (0) 1 (rand))
+    #phi (range (-1) 0 (tri))
+
+--d6 $ s "protokick*4" #speed (1+(rand/10))
+-- #lpf 600 #shape 0.6 #gain 0.8
+
+d6 silence
+
+
+hush
+
+-- pan
+d1
+  $ s "hc*16" # gain 1
+  # pan (range 0 1 sine)
+
+-- binaural
+d1 $ almostNever(#gain 0)
+  $ s "jvbass*12" #irand 8 #room 0.6 #sz 0.9 
+  # gain 1
+  # theta (range 0.8 (-0.8) (slow 0.8 $ sine))
+  # phi (range (-1) 1 (fast 3 $ sine))
+
+
+

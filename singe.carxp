@@ -1,0 +1,44 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE CARLA-PROJECT>
+<CARLA-PROJECT VERSION='2.2'>
+ <EngineSettings>
+  <ForceStereo>false</ForceStereo>
+  <PreferPluginBridges>false</PreferPluginBridges>
+  <PreferUiBridges>true</PreferUiBridges>
+  <UIsAlwaysOnTop>false</UIsAlwaysOnTop>
+  <MaxParameters>200</MaxParameters>
+  <UIBridgesTimeout>4000</UIBridgesTimeout>
+ </EngineSettings>
+
+ <Transport>
+  <BeatsPerMinute>120</BeatsPerMinute>
+ </Transport>
+
+ <ExternalPatchbay>
+  <Connection>
+   <Source>Built-in Audio Stéréo analogique:capture_FL</Source>
+   <Target>SuperCollider:in_1</Target>
+  </Connection>
+  <Connection>
+   <Source>Built-in Audio Stéréo analogique:capture_FR</Source>
+   <Target>SuperCollider:in_2</Target>
+  </Connection>
+  <Connection>
+   <Source>SuperCollider:out_1</Source>
+   <Target>Audio Adapter (Unitek Y-247A) Stéréo analogique:playback_FL</Target>
+  </Connection>
+  <Connection>
+   <Source>SuperCollider:out_2</Source>
+   <Target>Audio Adapter (Unitek Y-247A) Stéréo analogique:playback_FR</Target>
+  </Connection>
+  <Connection>
+   <Source>Midi-Bridge:RtMidiOut Client:(capture_0) Sardine</Source>
+   <Target>Midi-Bridge:Roland UM-1G at usb-0000:00:14-0-1-1-1- full speed:(playback_0) UM-1G MIDI 1</Target>
+  </Connection>
+  <Positions>
+   <Position x1="1550" y1="1718" x2="2285" y2="1703">
+    <Name>Midi-Bridge</Name>
+   </Position>
+  </Positions>
+ </ExternalPatchbay>
+</CARLA-PROJECT>

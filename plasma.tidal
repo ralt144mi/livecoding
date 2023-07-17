@@ -1,0 +1,61 @@
+--tekno?
+
+d2 $ s"protokick*4"
+ #squiz "<1 3 5 7 9>"
+
+
+
+
+
+d1 silence
+
+hush 
+
+xfade 4 $ s "~ bd"
+
+d4 $ s"hh(5,4)"
+
+setcps 0.6
+
+
+
+
+d2 $ slow 2 $ s"wobble(13,8)"
+#room 0.8 #sz (slow 4 $ sine)
+#speed (irand 4)+2
+-- #speed "4 5 6 7 8 9"
+  #speed "4"
+
+d4 $ sometimes(striate 156)
+$ s "bd*4" |+ n"<1 5 4*8 6>"
+
+d1 silence
+
+hush
+
+d1 $ striate (12) $ s "son:2*4"
+#pan (slow 4 $ sine)
+#room 0.8
+#sz (slow 2 $ sine+0.5)
+
+d3 $ slow 8 $    -- reduire le slow
+almostAlways (#comb (slow 7 $ tri))
+$ whenmod 12 8 (#squiz 10)
+$ s "protokick(5,3)"
+
+
+
+
+
+
+-- DOIT
+
+d6 $ slow 8
+$ s "son:1" 
+#squiz 2
+
+
+
+
+
+

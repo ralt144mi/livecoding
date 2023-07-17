@@ -1,0 +1,91 @@
+hush
+
+setcps(0.63)
+
+d2 $ s "hh*8" #nudge 1.25 -- #crush 4 #gain 1.2
+
+xfade 1 silence
+
+d2 $ every 32 (#room 0.8)
+$ every 16 (fast 2) 
+$ fast 4 $ struct (iter 4 "t(5,8)") $ n (scale "techno" "4*2 5*2 2*2"*8) # s "jvbass" 
+# octave 6 #nudge 0.4 #sustain 2 
+#crush 4 #lpf (slow 4 $ 200+sine*1000) 
+#resonance 0.5
+
+xfade 1 silence
+
+d1 -- $ striate (irand 4) 
+$ s "nevers:4*8" #octer 1 -- 
+#irand 4 #legato 1  #lpf 600 #nudge 1.25
+
+d1 $ striate 2 $ s "software:0" #speed 0.6 
+#legato 0.4 #lpf (slow 4 $ sine*400) #resonance 0.2
+#nudge 0.25 #ring 0.5 #ringf 400
+
+d2 $ every 2 (fast 2) $ s "808bd:2*8" #irand 8
+#nudge 1.4
+
+d4 $ every 4 (stutter 2 (1/16)) $ s "hh*16" #irand 1 #nudge 1.4 #hpf 5000
+
+d4 silence
+
+d5 silence
+
+d5 $ fast 1 $ striate "<1 4 8 16 45>"
+$ s "contrebasse:4" 
+#octer 1 #speed "<0.5 1 1.5>" #pan "<0 0.5 1>"
+#octersub 1 #irand 2 #legato 1.2
+
+d6 $ sometimes (#room 1)
+$ sometimes (ply 4)
+$ almostNever (fast 2)
+$ fast 2 $ s " ~ FXglitch:1"
+#speed (slow 4 $ 1+sine)-- #irand 4
+#nudge 1.4 #room 0.5 #sz 0.4 #leslie 0.7
+
+d6 silence
+
+d4 -- $ fast 4 $ always (#speed "<1 4 2 4 8 9 6 5 7>")
+$ s "jungbass*4" 
+#shape 0.6 #nudge 1.4
+
+
+hush
+
+d6 $ striate "<3>"
+$ rarely (ply 4)
+$ sometimes (palindrome) 
+$ n (scale "purvi" "8 .. 2")
+# "superpiano" #leslie 2 #lpf 500
+#octave 3 #nudge 1.4 #legato 3
+
+d2 $ s "808bd:4*7" #shape 0.6 #nudge 1.4
+
+d3 $ almostAlways (ply 2) $ s "[~ sn:4]*7" #shape 0.4 #nudge 1.4 #legato 0.4 #hpf 4000
+
+d1 -- $ every 2 (ply 2)
+$ fast 4 
+$ s "hh(4,5)" #speed 1 #irand 4
+
+d2 $ fast 12 $ s "~ ~ hh"
+
+d1 -- $ slow 1 -- $ jux (rev)
+-- $  striate "<4 2 4 4 2>" 
+$ s "[juj ~ juj juj]" 
+-- #irand 138 #gain 1.5 
+-- #bpf (500+sine*2000) #resonance 0.4 
+#legato 1.4 -- #vowel "<~ u ~ a ~>"
+-- #leslie 1.2 #room 0.9 #sz 0.2
+
+setcps(0.58)
+
+d2  $ fast 8
+-- $ striate 2 
+$ s "bd" #irand 16 #gain 1.2
+#pan "<0 0.25 0.5 0.75>"
+-- #nudge 0.4
+
+
+hush
+
